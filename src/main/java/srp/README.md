@@ -112,6 +112,7 @@ public class Student {
     .......
 }
 ```
-	* ![image](https://user-images.githubusercontent.com/26598629/225510091-b359a7a1-8a28-44b2-9480-55b0081a1169.png)
+	* Low level Details
+	![image](https://user-images.githubusercontent.com/26598629/225510091-b359a7a1-8a28-44b2-9480-55b0081a1169.png)
 
 
