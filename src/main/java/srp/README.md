@@ -26,8 +26,10 @@ public class Square{
 ```
 * Cohesion is the degree to which the various parts of a software component are related
    * It has wide variety of items 
-   * ![image](https://user-images.githubusercontent.com/26598629/225497717-e1642f8c-129b-4800-bbbe-e74e54b21945.jpg)
-   * Properly Segregated Garbage
-   * ![image](https://user-images.githubusercontent.com/26598629/225498385-27085419-b773-4edd-b8e3-3ab1f59be14e.jpg)
+   > Contents here has low cohesion
+    ![image](https://user-images.githubusercontent.com/26598629/225497717-e1642f8c-129b-4800-bbbe-e74e54b21945.jpg)
+   * Properly Segregated Garbage and all respective bins content has common relation  
+   > Contents here has high cohesion
+    ![image](https://user-images.githubusercontent.com/26598629/225498385-27085419-b773-4edd-b8e3-3ab1f59be14e.jpg)
 
 
