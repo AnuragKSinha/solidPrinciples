@@ -31,5 +31,8 @@ public class Square{
    * Properly Segregated Garbage and all respective bins content has common relation  
    > Contents here has high cohesion
     ![image](https://user-images.githubusercontent.com/26598629/225498385-27085419-b773-4edd-b8e3-3ab1f59be14e.jpg)
+   * Cohesion of functions in this class 
+   ![image](https://user-images.githubusercontent.com/26598629/225502929-753c9bde-d07b-4e0e-89be-9b183d4e7c67.png)
+
 
 
