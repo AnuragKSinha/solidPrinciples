@@ -112,7 +112,15 @@ public class Student {
     .......
 }
 ```
-	* Low level Details
-	![image](https://user-images.githubusercontent.com/26598629/225510091-b359a7a1-8a28-44b2-9480-55b0081a1169.png)
-
-
+* If we decide to go with no sql DB like mongoDB most of this code need to change,hence we can see the 
+  Student class is tightly coupled with the DB layer. 
+  * The Student class should ideally deal with Student related functionalities like getting studentId,DOB,Address etc.Student class should be
+    aware of the low level details related to dealing with DB layer. 
+![image](https://user-images.githubusercontent.com/26598629/225510091-b359a7a1-8a28-44b2-9480-55b0081a1169.png)
+    
+* To fix this we will separate out DB layer from Student class and refer DB layer from Student class.By doing so we have removed the tight coupling.
+    * _Loose Coupling helps attain better adherence to __Single Responsibility Principle___
+    * Now if we change the underlying DB then Student class does not need to get changed and recompiled you only need to change DB layer class
+    
+```java
+```
