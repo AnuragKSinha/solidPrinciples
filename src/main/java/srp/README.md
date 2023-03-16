@@ -25,4 +25,4 @@ public class Square{
 }
 ```
 * Cohesion is the degree to which the various parts of a software component are related
-   * ![garbage](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_142951586_crowded-street-litter-bin-with-household-garbage-and-waste-vector-cartoon-illustration-on-a-white.html&psig=AOvVaw3hLhWA4trSVu_pF5oeC0Ow&ust=1679020934149000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCID-3MS23_0CFQAAAAAdAAAAABAE)
+   * ![image](https://user-images.githubusercontent.com/26598629/225497172-0fef9c0a-4a38-4d52-be11-2a98495ae601.png)
