@@ -1,5 +1,5 @@
 # Solid Principles
-1. Single Responsibility
+1. [Single Responsibility](https://github.com/AnuragKSinha/solidPrinciples/blob/main/src/main/java/srp/README.md)
 2. Open Close Principles
 3. Liskov Substitution
 4. Interface Segregation 
