@@ -168,3 +168,57 @@ public class StudentRepository{
 }
 // Responsibility: Handle Database operations
 ```
+## Reason To Change
+* __Every __software component__ should have one and only one ~~responsibility~~ reason to change__
+    * If a software component has more reasons to change, then the frequency of changes to it will increase.Every change to a software component opens up the posibility of introducing bugs into the software. So if there are frequent changes to a software component, the possibility of introducing a bug goes up.And this will require more time and effort to be spent on re-testing the software after changes are done. 
+
+```java
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class Student {
+	private String studentId;
+
+	private String studentDOB;
+
+	private String address;
+
+	public void save() {
+		//Serialize object into a string representation
+		String objectStr = MyUtils.serializeIntoAString(this);
+		Connection connection = null;
+		Statement stmt = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/MyDB",
+                    "root", "password");
+			stmt = connection.createStatement();
+			stmt.execute("INSERT INTO STUDENT VALUES ("+ objectStr + ")");
+		}catch(Exception ex){
+			ex.getStackTrace();
+		}
+	}
+	public String getStudentId(){
+		return studentId;
+    }
+    public String setStudentId(String studentId){
+		this.studentId=studentId;
+    }
+    .....
+    .....
+    .......
+}
+```
+* Reasons To change
+    * A change in the student id format
+    * A change in the student name format
+    * A change in the database backend,as advised by the technical team
+* We will repeat the same steps that we took previously, we will separate the Student class from DB layer. And create a diff Repository class.
+    * Reason to change in Student class
+       * A change in the student id format
+       * A change in the student name format
+    * Reason to change in StudentRepository class
+       * A change in Database backend, as per technical team requirement
+    > If the reasons to change are closely related to one another then we can combine those reasons together. Hence the 2 reasons to change in Student class is closely related to Student and hence can be treated as one. Therefore both Student class and StudentRepository class now follows the Single Reason to Change and hence adhere to Single Responsibility Principle
+       
+ 
