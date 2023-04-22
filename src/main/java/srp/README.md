@@ -221,4 +221,5 @@ public class Student {
        * A change in Database backend, as per technical team requirement
     > If the reasons to change are closely related to one another then we can combine those reasons together. Hence the 2 reasons to change in Student class is closely related to Student and hence can be treated as one. Therefore both Student class and StudentRepository class now follows the Single Reason to Change and hence adhere to Single Responsibility Principle
        
- 
+ ## Summary 
+ * The Reason to change and Responsibility are pretty much the same and same set of actions needs to be taken. 
