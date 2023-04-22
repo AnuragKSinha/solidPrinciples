@@ -123,4 +123,48 @@ public class Student {
     * Now if we change the underlying DB then Student class does not need to get changed and recompiled you only need to change DB layer class
     
 ```java
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class Student {
+	private String studentId;
+
+	private String studentDOB;
+
+	private String address;
+
+	public void save() {
+		new StudentRepository().save(this);
+	}
+	public String getStudentId(){
+		return studentId;
+    }
+    public String setStudentId(String studentId){
+		this.studentId=studentId;
+    }
+    .....
+    .....
+    .......
+}
+// Responsibility: Handle core student profile data
+```
+```java
+public class StudentRepository{
+	public void save(Student student){
+		//Serialize object into a string representation
+		String objectStr = MyUtils.serializeIntoAString(this);
+		Connection connection = null;
+		Statement stmt = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/MyDB",
+                    "root", "password");
+			stmt = connection.createStatement();
+			stmt.execute("INSERT INTO STUDENT VALUES ("+ objectStr + ")");
+		}catch(Exception ex){
+			ex.getStackTrace();
+		}
+	}
+}
+// Responsibility: Handle Database operations
 ```
