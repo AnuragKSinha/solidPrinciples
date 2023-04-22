@@ -169,7 +169,7 @@ public class StudentRepository{
 // Responsibility: Handle Database operations
 ```
 ## Reason To Change
-* __Every __software component__ should have one and only one ~~responsibility~~ reason to change__
+* __Every __software component__ should have one and only one ~~responsibility~~ reason to change__[As per Uncle Bob]
     * If a software component has more reasons to change, then the frequency of changes to it will increase.Every change to a software component opens up the posibility of introducing bugs into the software. So if there are frequent changes to a software component, the possibility of introducing a bug goes up.And this will require more time and effort to be spent on re-testing the software after changes are done. 
 
 ```java
