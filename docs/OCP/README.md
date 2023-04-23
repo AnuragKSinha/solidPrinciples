@@ -81,3 +81,4 @@ public class VechileInsuranceCustomerProfile implements CustomerProfile {
 }
  
  ```
+   * At the beginning it might look like more work but the beauty of this design lies in how it handles future extensions.If One state extends it business to home insurance as well going forward then existing Calculator class remains untouched and for Home Insurance a new class needs to be created which implements CustomerProfile. 
