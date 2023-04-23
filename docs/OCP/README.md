@@ -87,5 +87,3 @@ public class VechileInsuranceCustomerProfile implements CustomerProfile {
 * Ease of adding new features. 
 * Leads to minimal cost of testing and software development. There is no change to existing code hence no regression testing needs to be done.[Integration testing needs to be done]
 * Open Closed Principle often requires decoupling, which in turn automatically follows the Single Responsibility Principle.   
-
-
