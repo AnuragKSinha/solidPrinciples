@@ -82,3 +82,10 @@ public class VechileInsuranceCustomerProfile implements CustomerProfile {
  
  ```
    * At the beginning it might look like more work but the beauty of this design lies in how it handles future extensions.If One state extends it business to home insurance as well going forward then __existing Calculator class remains untouched__ and for __Home Insurance a new class needs to be created which implements CustomerProfile.__
+
+# Key Takeaways
+* Ease of adding new features. 
+* Leads to minimal cost of testing and software development. There is no change to existing code hence no regression testing needs to be done.[Integration testing needs to be done]
+* Open Closed Principle often requires decoupling, which in turn automatically follows the Single Responsibility Principle.   
+
+
