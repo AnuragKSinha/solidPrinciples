@@ -98,3 +98,23 @@ public class CarUtils{
 * The InteriorWidth is nither cabin width nor cockpit width but a much more generic abstraction called interior width.
 * __This Principle will check if the Inheritance is done properly. If its not done properly then LSP will be violated.__
 <img width="501" alt="Screenshot 2023-04-23 at 10 46 10 PM" src="https://user-images.githubusercontent.com/26598629/233854554-640655cb-a66f-4fea-82c0-0114f6abfeb7.png">
+
+```java
+public class Product{
+ protected double discount;
+ 
+ public double getDiscount(){
+   return discount;
+ }
+}
+public class InHouseProduct extends Product {
+ public void applyExtraDiscount(){
+   discount=discount*1.5;
+ }
+}
+public class ProductUtils {
+ Product p1=new Product();
+ Product p2=new Product();
+ Product p3=new InHouseProduct();
+}
+```
