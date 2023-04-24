@@ -129,3 +129,36 @@ public class ProductUtils {
  }
 }
 ```
+ * The above example is not a good design.This is against LSP. We should have dealt will all the objects as Product Objects instead of typecasting to InHouseProduct for some of the Objects.Now we will refactor the example so that it follows LSP.
+
+```java
+public class Product{
+ protected double discount;
+ 
+ public double getDiscount(){
+   return discount;
+ }
+}
+public class InHouseProduct extends Product {
+ public double getDiscount(){
+   this.applyExtraDiscount();
+   return discount;
+ }
+ private void applyExtraDiscount(){
+   discount=discount*1.5;
+ }
+}
+public class ProductUtils {
+ Product p1=new Product();
+ Product p2=new Product();
+ Product p3=new InHouseProduct();
+ List<Product> productList=new ArrayList<>();
+ 
+ productList.add(p1);
+ productList.add(p2);
+ productList.add(p3);
+ for(Product product: productList){
+  System.out.println(product.getDiscount());// InhouseProduct overwrites the getDiscount() method so no special handling required
+ }
+}
+```
