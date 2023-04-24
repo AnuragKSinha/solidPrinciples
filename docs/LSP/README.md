@@ -140,6 +140,7 @@ public class Product{
  }
 }
 public class InHouseProduct extends Product {
+ @Override
  public double getDiscount(){
    this.applyExtraDiscount();
    return discount;
